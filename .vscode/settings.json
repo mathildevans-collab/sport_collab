@@ -1,3 +1,10 @@
 {
+<<<<<<< HEAD
   "java.compile.nullAnalysis.mode": "automatic"
 }
+=======
+    "cSpell.words": [
+        "appli"
+    ]
+}
+>>>>>>> 966fd7c20c28d29e530d478a987d17d2e4c722ba
