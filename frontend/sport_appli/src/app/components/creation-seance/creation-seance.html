@@ -1,1 +1,34 @@
-<p>creation-seance works!</p>
+<div class="creation-container">
+  <h2>Créer une séance de sport</h2>
+
+  <!-- Titre -->
+  <label for="titre">Titre :</label>
+  <input id="titre" [(ngModel)]="titre" type="text" placeholder="Ex: Cardio"/>
+
+  <!-- Description -->
+  <label for="description">Description :</label>
+  <textarea id="description" [(ngModel)]="description"></textarea>
+
+  <!-- Durée -->
+  <label for="duree">Durée (min) :</label>
+  <input id="duree" [(ngModel)]="duree" type="number"/>
+
+  <hr />
+
+  <h3>Ajouter des exercices</h3>
+
+  <input [(ngModel)]="nouvelExercice.nom" placeholder="Nom de l'exercice"/>
+  <input [(ngModel)]="nouvelExercice.repetitions" type="number" placeholder="Répétitions"/>
+  <input [(ngModel)]="nouvelExercice.series" type="number" placeholder="Séries"/>
+  <button (click)="ajouterExercice()">Ajouter</button>
+
+  <ul>
+    <li *ngFor="let ex of exercices">
+      ✅ {{ ex.nom }} - {{ ex.repetitions }} reps x {{ ex.series }} séries
+    </li>
+  </ul>
+
+  <hr />
+
+  <button (click)="creerSeance()">Créer la séance</button>
+</div>
