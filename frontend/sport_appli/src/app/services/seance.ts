@@ -10,7 +10,7 @@ export class SeanceService {
 
   private seances: Seance[] = [
     {
-      id: 1,
+    id: Date.now(),
       titre: 'Séance cardio',
       description: 'Course à pied et vélo',
       duree: 45,
@@ -20,6 +20,7 @@ export class SeanceService {
       ]
     }
   ];
+  nextId: any;
 
   getSeances(): Seance[] {
     return this.seances;
@@ -28,9 +29,9 @@ export class SeanceService {
   getSeanceParId(id: number): Seance | undefined {
     return this.seances.find(s => s.id === id);
   }
-
-  ajouterSeance(seance: Seance) {
-    this.seances.push(seance);
+ ajouterSeance(seance: Omit<Seance, 'id'>): void {
+    const seanceAvecId: Seance = { ...seance, id: this.nextId++ };
+    this.seances.push(seanceAvecId);
   }
 
   modifierSeance(seanceModifiee: Seance) {

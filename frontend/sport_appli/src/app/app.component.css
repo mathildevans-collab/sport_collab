@@ -1,0 +1,252 @@
+/* Reset de base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.container {
+  width: min(90%, 1100px);
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Header */
+.header {
+  background: #1a1a1a;
+  padding: 1rem 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #FF3E3E;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo-svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #FF3E3E;
+  outline: none;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #FF3E3E, #FF6A3E);
+  padding: 6rem 0;
+  text-align: center;
+  color: white;
+  border-radius: 0 0 60px 60px;
+  box-shadow: 0 10px 20px rgba(255, 62, 62, 0.4);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  border-radius: 9999px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  user-select: none;
+  box-shadow: 0 5px 15px rgb(255 62 62 / 0.4);
+}
+
+.btn-primary {
+  background: #fff;
+  color: #FF3E3E;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #f0f0f0;
+  outline: none;
+}
+
+.btn-secondary {
+  background: #FF3E3E;
+  color: white;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background: #e03434;
+  outline: none;
+}
+
+/* Services */
+.services {
+  padding: 4rem 0;
+  background: #222;
+  border-radius: 60px 60px 0 0;
+  color: #eee;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FF3E3E;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #333;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 300px;
+  box-shadow: 0 6px 15px rgba(255, 62, 62, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.card:focus-within {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(255, 62, 62, 0.6);
+  outline: none;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #FF6A3E;
+}
+
+.card p {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+/* Contact */
+.contact {
+  padding: 4rem 0;
+  background: #111;
+  color: #eee;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FF3E3E;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid #FF3E3E;
+  background: #222;
+  color: white;
+}
+
+.contact-form button {
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background: #1a1a1a;
+  color: #555;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}

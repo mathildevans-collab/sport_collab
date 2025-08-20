@@ -1,0 +1,12 @@
+.creation-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+input, textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 5px;
+}
